@@ -1,15 +1,49 @@
-22:05:30 **** Build of configuration Debug for project FileProject ****
+09:34:04 **** Incremental Build of configuration Debug for project StructProject ****
 make all 
 Building file: ../src/Test1.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.d" -o "src/Test1.o" "../src/Test1.c"
 Finished building: ../src/Test1.c
  
-Building target: FileProject
-Invoking: GCC C Linker
-gcc  -o "FileProject"  ./src/Test1.o   
-Finished building target: FileProject
+Building file: ../src/Test2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test2.d" -MT"src/Test2.d" -o "src/Test2.o" "../src/Test2.c"
+Finished building: ../src/Test2.c
  
-22:05:35 **** Incremental Build of configuration Debug for project FileProject ****
+Building target: StructProject
+Invoking: GCC C Linker
+gcc  -o "StructProject"  ./src/Test1.o ./src/Test2.o   
+Finished building target: StructProject
+ 
+09:34:10 **** Incremental Build of configuration Debug for project StructProject ****
 make all 
 make: Nothing to be done for 'all'.
+09:35:41 **** Incremental Build of configuration Debug for project StructProject ****
+make all 
+Building file: ../src/Test2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test2.d" -MT"src/Test2.d" -o "src/Test2.o" "../src/Test2.c"
+Finished building: ../src/Test2.c
+ 
+Building target: StructProject
+Invoking: GCC C Linker
+gcc  -o "StructProject"  ./src/Test1.o ./src/Test2.o   
+Finished building target: StructProject
+ 
+09:40:24 **** Incremental Build of configuration Debug for project StructProject ****
+make all 
+Building file: ../src/Test1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.d" -o "src/Test1.o" "../src/Test1.c"
+Finished building: ../src/Test1.c
+ 
+Building file: ../src/Test2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test2.d" -MT"src/Test2.d" -o "src/Test2.o" "../src/Test2.c"
+Finished building: ../src/Test2.c
+ 
+Building target: StructProject
+Invoking: GCC C Linker
+gcc  -o "StructProject"  ./src/Test1.o ./src/Test2.o   
+Finished building target: StructProject
+ 

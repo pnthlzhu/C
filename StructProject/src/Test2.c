@@ -1,0 +1,29 @@
+/*
+ * Test2.c
+ *
+ *  Created on: Apr 3, 2017
+ *      Author: zhuhuiling
+ */
+
+#include <stdio.h>
+
+//定义结构体
+struct stu{
+	char *name;	//姓名
+	int num;	//学号
+	int age;	//年龄
+	char group;	//所在学习小组
+	float score;//成绩
+} stu1 = {"jerry", 200, 10, 'A', 99.94f},
+  stu2 = {"tom", 100, 20, 'B', 99.99f};//定义结构体变量，同时进行赋值
+
+int main(int argc, char *argv[])
+{
+	fprintf(stdout, "%s's num is %d, age is %d, group is %c, score is %.1f\n",
+				stu1.name, stu1.num, stu1.age, stu1.group, stu1.score);
+
+	fprintf(stdout, "%s's num is %d, age is %d, group is %c, score is %.1f\n",
+					stu2.name, stu2.num, stu2.age, stu2.group, stu2.score);
+
+	return 0;
+}

@@ -1,0 +1,23 @@
+/*
+ * Test2.c
+ *
+ *  Created on: Apr 3, 2017
+ *      Author: zhuhuiling
+ */
+
+#include <stdio.h>
+
+//定义结构体
+struct stu{
+	char *name;	//姓名
+	int num;	//学号
+	int age;	//年龄
+	char group;	//所在学习小组
+	float score;//成绩
+};
+
+int main(int argc, char *argv[])
+{
+
+	return 0;
+}
