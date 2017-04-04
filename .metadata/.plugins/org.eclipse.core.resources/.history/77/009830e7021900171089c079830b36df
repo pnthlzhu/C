@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	//枚举类型的定义
+	//定义枚举
 	enum week{
 		Mon,//枚举值默认从0开始
 		Tues,
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		Sun
 	};
 
-	//定义枚举变量
+	//枚举变量
 	enum week day;
 
 	printf("please input a digit(0-6):\n");

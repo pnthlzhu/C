@@ -1,0 +1,17 @@
+/*
+ * Test2.c
+ *
+ *  Created on: Apr 4, 2017
+ *      Author: zhuhuiling
+ */
+
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+	//枚举类型的定义
+	enum week{
+		Mon, Tue, Wed, Thurs, Fri, Sta, Sun
+	};
+	return 0;
+}

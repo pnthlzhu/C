@@ -690,3 +690,24 @@ Binding(CTRL+D,
 
 !ENTRY org.eclipse.cdt.core 1 0 2017-04-04 02:39:40.243
 !MESSAGE Indexed 'EnumProject' (0 sources, 0 headers) in 0.00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.egit.core 4 0 2017-04-04 02:49:10.645
+!MESSAGE An exception occurred during push on URI https://github.com/pnthlzhu/C.git: https://github.com/pnthlzhu/C.git: cannot open git-receive-pack
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/pnthlzhu/C.git: cannot open git-receive-pack
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:160)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:221)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:164)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:226)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/pnthlzhu/C.git: cannot open git-receive-pack
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:499)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:398)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:156)
+	... 4 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused) github.com
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:174)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:462)
+	... 8 more

@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		Sun
 	};
 
-	//定义枚举变量
+	//枚举变量
 	enum week day;
 
 	printf("please input a digit(0-6):\n");

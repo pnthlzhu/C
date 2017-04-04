@@ -1,6 +1,15 @@
-02:48:17 **** Incremental Build of configuration Debug for project EnumProject ****
+03:02:57 **** Incremental Build of configuration Debug for project EnumProject ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/Test2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test2.d" -MT"src/Test2.d" -o "src/Test2.o" "../src/Test2.c"
+Finished building: ../src/Test2.c
+ 
+Building target: EnumProject
+Invoking: GCC C Linker
+gcc  -o "EnumProject"  ./src/Test1.o ./src/Test2.o   
+Finished building target: EnumProject
+ 
 
-02:48:17 Build Finished (took 161ms)
+03:02:57 Build Finished (took 359ms)
 
