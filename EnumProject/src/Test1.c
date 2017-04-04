@@ -1,0 +1,58 @@
+/*
+ * Test1.c
+ *
+ *  Created on: Apr 4, 2017
+ *      Author: zhuhuiling
+ */
+
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+	//定义枚举
+	enum week{
+		Mon,//枚举值默认从0开始
+		Tues,
+		Wed,
+		Thurs,
+		Fri,
+		Sat,
+		Sun
+	};
+
+	//枚举变量
+	enum week day;
+
+	printf("please input a digit(0-6):\n");
+	scanf("%d", &day);
+
+	switch(day)
+	{
+	case Mon:
+		puts("Monday");
+		break;
+	case Tues:
+		puts("Tuesday");
+		break;
+	case Wed:
+		puts("Wednesday");
+		break;
+	case Thurs:
+		puts("Thursday");
+		break;
+	case Fri:
+		puts("Friday");
+		break;
+	case Sat:
+		puts("Saturday");
+		break;
+	case Sun:
+		puts("Sunday");
+		break;
+	default:
+		puts("Error");
+		break;
+	}
+
+	return 0;
+}

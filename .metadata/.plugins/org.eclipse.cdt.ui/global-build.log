@@ -1,32 +1,19 @@
-02:08:38 **** Incremental Build of configuration Debug for project StructProject ****
+02:48:00 **** Build of configuration Debug for project EnumProject ****
 make all 
-Building file: ../src/Test4.c
+Building file: ../src/Test1.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test4.d" -MT"src/Test4.d" -o "src/Test4.o" "../src/Test4.c"
-Finished building: ../src/Test4.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.d" -o "src/Test1.o" "../src/Test1.c"
+../src/Test1.c: In function ‘main’:
+../src/Test1.c:27:2: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘enum week *’ [-Wformat=]
+  scanf("%d", &day);
+  ^
+Finished building: ../src/Test1.c
  
-Building file: ../src/Test5.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test5.d" -MT"src/Test5.d" -o "src/Test5.o" "../src/Test5.c"
-Finished building: ../src/Test5.c
- 
-Building target: StructProject
+Building target: EnumProject
 Invoking: GCC C Linker
-gcc  -o "StructProject"  ./src/Test1.o ./src/Test2.o ./src/Test3.o ./src/Test4.o ./src/Test5.o   
-Finished building target: StructProject
+gcc  -o "EnumProject"  ./src/Test1.o   
+Finished building target: EnumProject
  
-02:08:43 **** Incremental Build of configuration Debug for project StructProject ****
+02:48:17 **** Incremental Build of configuration Debug for project EnumProject ****
 make all 
 make: Nothing to be done for 'all'.
-02:09:03 **** Incremental Build of configuration Debug for project StructProject ****
-make all 
-Building file: ../src/Test5.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test5.d" -MT"src/Test5.d" -o "src/Test5.o" "../src/Test5.c"
-Finished building: ../src/Test5.c
- 
-Building target: StructProject
-Invoking: GCC C Linker
-gcc  -o "StructProject"  ./src/Test1.o ./src/Test2.o ./src/Test3.o ./src/Test4.o ./src/Test5.o   
-Finished building target: StructProject
- 
