@@ -1,20 +1,15 @@
-09:40:24 **** Incremental Build of configuration Debug for project StructProject ****
+02:09:03 **** Incremental Build of configuration Debug for project StructProject ****
 make all 
-Building file: ../src/Test1.c
+Building file: ../src/Test5.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.d" -o "src/Test1.o" "../src/Test1.c"
-Finished building: ../src/Test1.c
- 
-Building file: ../src/Test2.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test2.d" -MT"src/Test2.d" -o "src/Test2.o" "../src/Test2.c"
-Finished building: ../src/Test2.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test5.d" -MT"src/Test5.d" -o "src/Test5.o" "../src/Test5.c"
+Finished building: ../src/Test5.c
  
 Building target: StructProject
 Invoking: GCC C Linker
-gcc  -o "StructProject"  ./src/Test1.o ./src/Test2.o   
+gcc  -o "StructProject"  ./src/Test1.o ./src/Test2.o ./src/Test3.o ./src/Test4.o ./src/Test5.o   
 Finished building target: StructProject
  
 
-09:40:24 Build Finished (took 424ms)
+02:09:03 Build Finished (took 342ms)
 

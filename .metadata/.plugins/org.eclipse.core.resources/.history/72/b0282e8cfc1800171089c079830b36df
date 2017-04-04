@@ -1,0 +1,24 @@
+/*
+ * Test5.c
+ *
+ *  Created on: Apr 4, 2017
+ *      Author: zhuhuiling
+ */
+
+#include <stdio.h>
+#include "Struct.h"
+
+int main(int argc, char *argv[])
+{
+	struct stu szClass[] = {
+			{"jerry", 100, 10, 'A', 99.99f},
+			{"tom", 101, 11, 'B', 89.99f},
+			{"bob", 102, 12, 'C', 79.99f}
+	};
+
+	struct stu *pStu;
+
+
+
+	return 0;
+}

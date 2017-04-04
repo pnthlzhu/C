@@ -1,0 +1,16 @@
+/*
+ * Test4.c
+ *
+ *  Created on: Apr 4, 2017
+ *      Author: zhuhuiling
+ */
+
+#include <stdio.h>
+#include "Struct.h"
+
+int main(int argc, char *argv[])
+{
+	struct stu stu1 = {"hlzhu", 106, 28, 'A', 100.0f};
+
+	return 0;
+}
