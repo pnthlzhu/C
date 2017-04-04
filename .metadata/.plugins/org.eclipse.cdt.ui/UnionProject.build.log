@@ -1,6 +1,6 @@
-10:02:38 **** Incremental Build of configuration Debug for project UnionProject ****
+10:35:12 **** Incremental Build of configuration Debug for project UnionProject ****
 make all 
 make: Nothing to be done for 'all'.
 
-10:02:38 Build Finished (took 171ms)
+10:35:12 Build Finished (took 97ms)
 

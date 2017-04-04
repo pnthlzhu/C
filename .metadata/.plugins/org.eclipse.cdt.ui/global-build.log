@@ -1,15 +1,15 @@
-10:02:30 **** Incremental Build of configuration Debug for project UnionProject ****
+10:35:06 **** Incremental Build of configuration Debug for project UnionProject ****
 make all 
-Building file: ../src/Test1.c
+Building file: ../src/Test2.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test1.d" -MT"src/Test1.d" -o "src/Test1.o" "../src/Test1.c"
-Finished building: ../src/Test1.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test2.d" -MT"src/Test2.d" -o "src/Test2.o" "../src/Test2.c"
+Finished building: ../src/Test2.c
  
 Building target: UnionProject
 Invoking: GCC C Linker
-gcc  -o "UnionProject"  ./src/Test1.o   
+gcc  -o "UnionProject"  ./src/Test1.o ./src/Test2.o   
 Finished building target: UnionProject
  
-10:02:38 **** Incremental Build of configuration Debug for project UnionProject ****
+10:35:12 **** Incremental Build of configuration Debug for project UnionProject ****
 make all 
 make: Nothing to be done for 'all'.

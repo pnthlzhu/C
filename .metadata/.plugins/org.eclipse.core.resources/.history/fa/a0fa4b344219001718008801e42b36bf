@@ -1,0 +1,26 @@
+/*
+ * Test2.c
+ *
+ *  Created on: Apr 4, 2017
+ *      Author: zhuhuiling
+ */
+
+#include <stdio.h>
+
+#define TOTAL 4	//人员总数
+
+struct{
+	char name[20];
+	int num;
+	char sex;
+	char profession;
+	union{
+		float score;
+		char course[20];
+	} sc;
+} bodys[TOTAL];
+
+int main(int argc, char *argv[])
+{
+	return 0;
+}
