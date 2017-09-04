@@ -210,6 +210,62 @@ BOOL saveImage(const char *cpImagePath, const Image *ipImage)
 	    }  
 	}
     }
+    else if (ipImage->iChannels == 1)//8位，单通道，灰度图   
+    {  
+	iStep = ipImage->iWidth;  
+	iOffset = iStep%4;  
+	if (iOffset != 4)  
+	{  
+	    iStep += 4-iOffset;  
+	}  
+						  
+	tBmpFileHeader.bfSize = 54 + 256*4 + ipImage->iWidth;  
+	tBmpFileHeader.bfReserved1 = 0;  
+	tBmpFileHeader.bfReserved2 = 0;  
+	tBmpFileHeader.bfOffBits = 54 + 256*4;  
+	fwrite(&tBmpFileHeader, sizeof(BitMapFileHeader), 1, fpImageFile);  
+											  
+	tBmpInfoHeader.biSize = 40;  
+	tBmpInfoHeader.biWidth = ipImage->iWidth;  
+	tBmpInfoHeader.biHeight = ipImage->iHeight;  
+	tBmpInfoHeader.biPlanes = 1;  
+	tBmpInfoHeader.biBitCount = 8;  
+	tBmpInfoHeader.biCompression = 0;  
+	tBmpInfoHeader.biSizeImage = ipImage->iHeight*iStep;  
+	tBmpInfoHeader.biXPelsPerMeter = 0;  
+	tBmpInfoHeader.biYPelsPerMeter = 0;  
+	tBmpInfoHeader.biClrUsed = 256;  
+	tBmpInfoHeader.biClrImportant = 256;  
+	fwrite(&tBmpInfoHeader, sizeof(BitMapInfoHeader), 1, fpImageFile);  
+												  
+	pRGBQuad = (RGBQuad*)malloc(sizeof(RGBQuad)*256);  
+	for (i=0; i<256; i++)  
+	{  
+	    pRGBQuad[i].rgbBlue = i;  
+	    pRGBQuad[i].rgbGreen = i;  
+	    pRGBQuad[i].rgbRed = i;  
+	    pRGBQuad[i].rgbReserved = 0;  
+	}  
+	fwrite(pRGBQuad, sizeof(RGBQuad), 256, fpImageFile);  
+	free(pRGBQuad);  
+																											  
+	for (i=ipImage->iHeight-1; i>-1; i--)  
+	{  
+	    for (j=0; j<ipImage->iWidth; j++)  
+	    {  
+		bPixVal = ipImage->ucpImageData[i*ipImage->iWidth+j];  
+		fwrite(&bPixVal, sizeof(BYTE), 1, fpImageFile);  
+	    }  
+	    if (iOffset!=0)  
+	    {  
+		for (j=0; j<iOffset; j++)  
+		{  
+		    bPixVal = 0;  
+		    fwrite(&bPixVal, sizeof(BYTE), 1, fpImageFile);  
+		}  
+	    }  
+	}  
+    }
 
     fclose(fpImageFile);
 
