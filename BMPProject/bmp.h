@@ -1,37 +1,49 @@
 #ifndef _BMP_H
 #define _BMP_H
 
+#pragma pack(1)
+
+typedef unsigned short WORD;
+typedef unsigned int DWORD;
+typedef unsigned char BYTE;
+typedef int BOOL;
+
+#define TRUE 1
+#define FALSE 0
+
 typedef struct
 {
-    unsigned short usType;
-    unsigned long ulSize;
-    unsigned short usReserved1;
-    unsigned short usReserved2;
-    unsigned long ulOffBits;
+    WORD bfType;
+    DWORD bfSize;
+    WORD bfReserved1;
+    WORD bfReserved2;
+    DWORD bfOffBits;
 }BitMapFileHeader;
 
 typedef struct
 {
-    unsigned long ulSize;
-    long lWidth;
-    long lHeight;
-    unsigned short usPlanes;
-    unsigned short usBitCount;
-    unsigned long ulCompression;
-    unsigned long ulSizeImage;
-    long lXPelsPerMeter;
-    long lYPelsPerMeter;
-    unsigned long ulClrUsed;
-    unsigned long ulClrImportant;
+    DWORD biSize;
+    DWORD biWidth;
+    DWORD biHeight;
+    WORD biPlanes;
+    WORD biBitCount;
+    DWORD biCompression;
+    DWORD biSizeImage;
+    DWORD biXPelsPerMeter;
+    DWORD biYPelsPerMeter;
+    DWORD biClrUsed;
+    DWORD biClrImportant;
 }BitMapInfoHeader;
 
 typedef struct
 {
-    unsigned char ucRGBBlue;
-    unsigned char ucRGBGreen;
-    unsigned char ucRGBRed;
-    unsigned char ucRGBReserved;
+    BYTE rgbBlue;
+    BYTE rgbGreen;
+    BYTE rgbRed;
+    BYTE rgbReserved;
 }RGBQuad;
+
+#pragma pack()
 
 typedef struct
 {
@@ -42,5 +54,6 @@ typedef struct
 }Image;
 
 Image* loadImage(const char *cpImagePath);
+BOOL saveImage(const char *cpImagePath, const Image *ipImage);
 
 #endif
